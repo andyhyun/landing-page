@@ -1,6 +1,9 @@
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #f9faf8;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 ul, h1, p {
@@ -10,6 +13,8 @@ ul, h1, p {
 
 ul {
   list-style: none;
+  display: flex;
+  gap: 16px;
 }
 
 a, .hero p, .container p, .footer {
@@ -28,6 +33,20 @@ a {
   background-color: #1f2937;
 }
 
+.header, .footer {
+  height: 72px;
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  justify-content: space-around;
+}
+
+.footer {
+  justify-content: center;
+}
+
 .logo, .hero h1, button, .hero .box, .container h1 {
   color: #f9faf8;
 }
@@ -40,8 +59,24 @@ a {
   font-size: 24px;
 }
 
+.hero {
+  padding: 100px 0px;
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+}
+
+.hero .left {
+  max-width: 450px;
+}
+
 .hero h1 {
   font-size: 48px;
+  margin-bottom: 4px;
+}
+
+.hero button {
+  margin-top: 16px;
 }
 
 button, .container {
@@ -54,6 +89,10 @@ button {
   padding: 6px 28px;
 }
 
+.content {
+  flex: 1;
+}
+
 .subtext {
   color: #5b5a5a;
 }
@@ -63,9 +102,12 @@ button {
 }
 
 .hero .box {
-  width: 400px;
-  height: 200px;
+  width: 500px;
+  height: 250px;
   background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .info h1, .quote p {
@@ -73,18 +115,54 @@ button {
   font-size: 36px;
 }
 
+.info {
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px
+}
+
+.info .figure-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 64px;
+}
+
+.figure {
+  width: 164px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
 .figure .box {
-  width: 160px;
-  height: 160px;
+  width: 164px;
+  height: 164px;
   border-radius: 16px;
   border: 4px solid #3882f6;
 }
 
 .quote {
   background-color: #e5e7eb;
+  padding: 120px 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .quote p {
   font-weight: 300;
   font-style: italic;
+}
+
+.container {
+  padding: 40px 48px;
+  margin: 80px 240px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-around;
 }
